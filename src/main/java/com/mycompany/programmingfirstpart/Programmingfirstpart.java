@@ -40,7 +40,11 @@ public class Programmingfirstpart {
         
         //calling the passwordcomplexity method
         boolean output=Login.PasswordComplexity(enteredPassword);
-        
+      System.out.print(output);
+      
+        //Method that returns necessary registration messages 
+        String display=Login.Registeruser(enteredusername, enteredPassword);
+        System.out.println(display);
     }
     
     }
