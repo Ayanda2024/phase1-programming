@@ -13,38 +13,41 @@ public class Programmingfirstpart {
     public static void main(String[] args) {
         //Declarations
         String username="Aya_1";
-        String password="Berry@01";
-         String firstname;
-        String lastname;
+        String password="Berry@1992!";
+         String firstname="Ayanda";
+        String lastname="Ngwenya";
         
         //Creating an object of the Scanner
         Scanner sc=new Scanner(System.in);
         
         //Prompting the user 
-        System.out.print("Enter your username");
+        System.out.println("Enter your username:");
         String enteredusername=sc.next();
         
-        System.out.print("Enter your password");
+        System.out.println("Enter your password:");
         String enteredPassword=sc.next();
         
-        System.out.print("Enter your firstname");
+        System.out.println("Enter your firstname:");
          firstname=sc.next();
         
-        System.out.print("Enter your lastname");
+        System.out.println("Enter your lastname:");
          lastname=sc.next();
         
          Login login=new Login();
          //Calling the checkusername method
         boolean result=Login.checkusername(enteredusername);
-        System.out.print(result);
+        System.out.println(result);
         
         //calling the passwordcomplexity method
         boolean output=Login.PasswordComplexity(enteredPassword);
-      System.out.print(output);
+      System.out.println(output);
       
         //Method that returns necessary registration messages 
         String display=Login.Registeruser(enteredusername, enteredPassword);
         System.out.println(display);
+        
+        String show=Login.loginUser(enteredusername, enteredPassword);
+        System.out.print(show);
     }
     
     }
