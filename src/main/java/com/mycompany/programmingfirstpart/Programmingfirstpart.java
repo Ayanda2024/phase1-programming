@@ -13,8 +13,8 @@ public class Programmingfirstpart {
     public static void main(String[] args) {
         //Declarations
         String username="Aya_1";
-        String password="Ngwenya@01";
-        String firstname;
+        String password="Berry@01";
+         String firstname;
         String lastname;
         
         //Creating an object of the Scanner
@@ -28,10 +28,20 @@ public class Programmingfirstpart {
         String enteredPassword=sc.next();
         
         System.out.print("Enter your firstname");
-        firstname=sc.next();
+         firstname=sc.next();
         
         System.out.print("Enter your lastname");
-        lastname=sc.next();
+         lastname=sc.next();
+        
+         Login login=new Login();
+         //Calling the checkusername method
+        boolean result=Login.checkusername(enteredusername);
+        System.out.print(result);
+        
+        //calling the passwordcomplexity method
+        boolean output=Login.PasswordComplexity(enteredPassword);
         
     }
-}
+    
+    }
+
