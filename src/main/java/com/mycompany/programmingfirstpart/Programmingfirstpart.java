@@ -13,7 +13,7 @@ public class Programmingfirstpart {
     public static void main(String[] args) {
         //Declarations
         String username="Aya_1";
-        String password="Berry@1992!";
+       
          String firstname="Ayanda";
         String lastname="Ngwenya";
         
@@ -32,22 +32,26 @@ public class Programmingfirstpart {
         
         System.out.println("Enter your lastname:");
          lastname=sc.next();
-        
+        //Creating instance of the class 
          Login login=new Login();
          //Calling the checkusername method
-        boolean result=Login.checkusername(enteredusername);
+        boolean result=login.checkusername(enteredusername);
         System.out.println(result);
         
         //calling the passwordcomplexity method
-        boolean output=Login.PasswordComplexity(enteredPassword);
+        
+       boolean output= login.PasswordComplexity(enteredPassword);
       System.out.println(output);
       
         //Method that returns necessary registration messages 
-        String display=Login.Registeruser(enteredusername, enteredPassword);
+        String display=login.Registeruser(enteredusername, enteredPassword);
         System.out.println(display);
-        
-        String show=Login.loginUser(enteredusername, enteredPassword);
+        //Method that checks if user has provided the correct username and password
+        String show=login.loginUser(enteredusername, enteredPassword);
         System.out.print(show);
+        
+        //Method that returns necessary login status
+        
     }
     
     }
