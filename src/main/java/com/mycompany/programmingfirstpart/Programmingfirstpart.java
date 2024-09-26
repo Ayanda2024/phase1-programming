@@ -25,26 +25,24 @@ public class Programmingfirstpart {
          Login login=new Login();
         
         //Method that returns necessary registration messages 
-        login.Registeruser();
+       String registrationmessage= login.Registeruser();
+        //Method that checks if user has provided the correct username and password
         
-         //Calling the checkusername method
-        boolean result=login.checkusername(username);
-        System.out.println(result);
-        
-        
-        //calling the passwordcomplexity method
-        
-       boolean output= login.PasswordComplexity(Password);
-      System.out.println(output);
+        String validation=login.loginUser();
+        System.out.println(validation);
+        boolean isLoggedIn = false;
+         
       
         
-        //Method that checks if user has provided the correct username and password
-        String show=login.loginUser(username, Password);
-        System.out.print(show);
+        
         
         //Method that returns necessary login status
         
+        String loginresult=login.returnLoginStatus(isLoggedIn);
+        System.out.println(loginresult);
     }
     
     }
+
+        
 
