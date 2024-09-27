@@ -11,33 +11,32 @@ import java.util.Scanner;
 public class Programmingfirstpart {
 
     public static void main(String[] args) {
-        //Declarations
-        String username="Aya_1";
-       String Password="Berry@1992!";
-         String firstname="Ayanda";
-        String lastname="Ngwenya";
         
         //Creating an object of the Scanner
         Scanner sc=new Scanner(System.in);
+        
         
         
         //Creating instance of the class 
          Login login=new Login();
         
         //Method that returns necessary registration messages 
-       String registrationmessage= login.Registeruser();
+       String registrationmessage=login.Registeruser();
+       System.out.println(registrationmessage);
+       //Prompts for login
+       System.out.println("Please enter username");
+       String enteredusername=sc.next();
+       System.out.println("Enter password");
+       String enteredpassword=sc.next();
         //Method that checks if user has provided the correct username and password
         
-        String validation=login.loginUser();
+        
+        String validation=login.loginUser(enteredusername,enteredpassword);
         System.out.println(validation);
-        boolean isLoggedIn = false;
-         
-      
         
-        
-        
+       
         //Method that returns necessary login status
-        
+        boolean isLoggedIn=validation.startsWith("Welcome");
         String loginresult=login.returnLoginStatus(isLoggedIn);
         System.out.println(loginresult);
     }
